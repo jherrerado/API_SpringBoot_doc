@@ -10,6 +10,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 
 public class ClientesDTO {
   private long clientId;

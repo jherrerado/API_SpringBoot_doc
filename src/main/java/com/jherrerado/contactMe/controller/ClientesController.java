@@ -2,6 +2,7 @@ package com.jherrerado.contactMe.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.jherrerado.contactMe.model.dto.ClientesDTO;
@@ -13,12 +14,12 @@ import com.jherrerado.contactMe.services.IClientesServices;
 
 public class ClientesController {
 
+  @Autowired
   private IClientesServices clientesServices;
 
   @GetMapping("/clientes")
   public List<ClientesDTO> getClientes() {
-    List<ClientesDTO> costumers = ClientesMapper.INSTANCE.clientesToClientesDTOs(clientesServices.findClientes());
-    return costumers;
+    return ClientesMapper.INSTANCE.clientesToClientesDTOs(clientesServices.findClientes());
   }
 
 }
