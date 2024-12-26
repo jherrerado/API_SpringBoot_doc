@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.jherrerado.contactMe.model.dto.ClientesDTO;
-import com.jherrerado.contactMe.model.entities.Clientes;
 import com.jherrerado.contactMe.model.mapper.ClientesMapper;
 import com.jherrerado.contactMe.services.IClientesServices;
 
