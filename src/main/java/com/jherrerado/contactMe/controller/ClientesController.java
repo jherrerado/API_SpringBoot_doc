@@ -26,10 +26,4 @@ public class ClientesController {
   public List<ClientesDTO> getClientes() {
     return ClientesMapper.INSTANCE.clientesToClientesDTOs(clientesServices.findClientes());
   }
-
-  @GetMapping("/pruevas")
-  public List<Clientes> getPClientes() {
-    return clientesServices.findClientes();
-  }
-
 }
